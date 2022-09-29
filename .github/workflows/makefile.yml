@@ -1,0 +1,40 @@
+name: Makefile CI
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  release:
+
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Go
+        uses: actions/setup-go@v3
+        with:
+          go-version: 1.18
+
+      - name: Install dependencies
+        run: make github
+
+      - name: UPX GitHub Action
+        uses: crazy-max/ghaction-upx@v1.4.0
+        with:
+          files: "bin/*.exe"
+          args: --best
+
+      - name: Generate shasum
+        run : |
+          cd bin
+          md5sum *.exe >> CHECKSUM.md5
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            bin/*.exe
+            bin/CHECKSUM.md5

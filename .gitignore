@@ -1,0 +1,29 @@
+.idea
+
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.upx
+
+# Data
+*.dat
+*.rar
+*.zip
+*.txt
+*.xlsx
+*.db
+*.bak
+*.bat
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+*.go1
+*.md5
+
+download
