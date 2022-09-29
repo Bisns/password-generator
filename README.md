@@ -1,2 +1,1 @@
-
-![pwd](https://user-images.githubusercontent.com/55308795/192943687-80fad4bf-84f0-4ad7-a809-385da56740ab.png)
+![pwd](https://user-images.githubusercontent.com/55308795/192943818-7b108284-6e29-4d4f-9a7e-2cc2b40aa205.png)
